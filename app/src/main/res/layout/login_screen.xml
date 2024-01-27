@@ -11,37 +11,52 @@
         android:gravity="center"
         android:padding="20dp"
 >
-        <EditText
-            android:background="@drawable/rounded_corner"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userNameTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="18dp"
-            android:inputType="text"
-            android:id="@+id/username_input"
-            android:layout_marginTop="32dp"
-            android:hint="Username"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="20sp"></EditText>
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            app:hintEnabled="false"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:background="@android:color/transparent"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-            android:hint="Password"
+            android:layout_below="@id/userNameTextInputLayout"
             app:passwordToggleEnabled="true"
-            app:endIconTint="@color/black"
-            android:textColorHint="@color/black"
-            android:id="@+id/password_input"
-            >
-           
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
             android:background="@drawable/rounded_corner"
-            />
+            app:hintEnabled="false"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:imeOptions="actionDone"
+                android:background="@android:color/transparent"
+                />
         </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/signup_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up instead?"
+            android:layout_gravity="end"
+            android:layout_marginTop="16dp"/>
 
 
         <Button
