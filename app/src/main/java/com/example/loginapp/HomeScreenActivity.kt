@@ -1,11 +1,9 @@
+package com.example.loginapp;
 
 import android.os.Bundle
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.loginapp.HomeFragment
-import com.example.loginapp.R
-import com.example.loginapp.SettingsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
